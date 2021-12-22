@@ -3,7 +3,7 @@
     <h1>Github Typeahead</h1>
 
     <div class="search-and-results">
-      <input type="text" placeholder="search for a github user" v-model="searchTerm" @input="searchUsers(searchTerm)"/>
+      <input type="text" placeholder="search for a github user" v-model="searchTerm" @keyup="searchUsers(searchTerm)"/>
       <ul v-for="match in matches" :key="match.id" >
         <router-link class="router-link" :to="{name: 'User', 
         params: {
